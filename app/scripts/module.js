@@ -7,5 +7,7 @@ let app = angular.module('MainApp', [
     'ngAria',
     'ngMessages',
     'ngSanitize',
-    'ngAnimate'
+    'ngAnimate',
+    // - TEST
+    'ngTagsInput'
 ]);
