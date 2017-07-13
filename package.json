@@ -1,0 +1,11 @@
+{
+  "name": "html-vanilla",
+  "version": "1.0.0",
+  "description": "Website for generate json data to websiteForLan",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1"
+  },
+  "author": "Endy WindAFlame",
+  "license": "SimPL-2.0"
+}

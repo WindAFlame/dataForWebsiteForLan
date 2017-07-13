@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheet - Depandencies -->
+    <!-- Awesome Font -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Flag Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/2.8.0/css/flag-icon.min.css">
+    <!-- Stylesheet - Your Work -->
+    <link rel="stylesheet" href="app/styles/layout.css">
+    <!-- Scripts Models -->
+    <script src="app/scripts/models/WebsiteForLanSerialization.js"></script>
+    
+</head>
+<body ng-app="MainApp">
+
+    <!-- Your Work : START -->
+    <main ng-controller="MainCtrl">
+        <!-- Formulaire -->
+        <form name="form.model" ng-submit="form.submit()">
+
+            <fieldset>
+                <legend>General</legend>
+                <input type="hidden" name="id" />
+                <label for="title">Title</label>
+                <input type="text" ng-model="form.input.title" for="title" name="title" />
+                <br/>
+                <label for="synopsis">Synopsis</label>
+                <input type="textarea" ng-model="form.input.synopsis" for="synopsis" name="synopsis" />
+                <br/>
+                <label for="cover">Cover</label>
+                <input type="text" ng-model="form.input.cover" for="cover" name="cover" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Information</legend>
+
+                    <label for="genre">Genre</label>
+                    <input type="text" ng-model="form.input.genre" for="genre" name="genre" />
+                    <br/>
+                    <label for="developper">Developper</label>
+                    <input type="text" ng-model="form.input.developper" for="developper" name="developper" />
+                    <br/>
+                    <label for="editor">Editor</label>
+                    <input type="text" ng-model="form.input.editor" for="editor" name="editor" />
+                    <br/>
+                    <label for="audio">Audio</label>
+                    <input type="text" ng-model="form.input.audio" for="audio" name="audio" />
+                    <br/>
+                    <label for="subtitle">Subtitle</label>
+                    <input type="text" ng-model="form.input.subtitle" for="subtitle" name="subtitle" />
+                    <br/>
+                    <label for="system">System</label>
+                    <input type="text" ng-model="form.input.system" for="system" name="system" />
+                    <br/>
+                    <label for="release">Release Date</label>
+                    <input type="date" ng-model="form.input.release" for="release" name="release"/>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Download</legend>
+
+                   
+
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+        <pre>{{form.model}}</pre>
+    </main>
+    <!-- Your Work : END -->
+
+    <!-- Scripts - Depandencies -->
+    <!-- Angularjs Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-messages.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-sanitize.min.js"></script>
+    <!-- Tools -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/7.2.0/validator.min.js"></script>
+    <!-- Scripts - Your Work -->
+    <!-- Angularjs - MainApp -->
+    <script src="app/scripts/module.js"></script>
+    <!-- Angularjs - Factories -->    
+    <!-- Angularjs - Directives -->
+    <!-- Angularjs - Controllers -->
+    <script src="app/scripts/controllers/main.js"></script>
+    
+</body>
+</html>
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved. 
+Use of this source code is governed by an MIT-style license that can be in foundin the LICENSE file at http://material.angularjs.org/license.
+-->
