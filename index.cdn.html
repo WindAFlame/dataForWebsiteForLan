@@ -37,103 +37,134 @@
                         <input type="hidden" name="id" />
 
                         <!-- Title -->
-                        <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield">
+                        <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <input class="mdl-textfield__input" type="text" ng-model="form.input.title" id="title">
                             <label class="mdl-textfield__label" for="title">Title</label>
                         </div>
                         <br/>
                         
                         <!-- Synopsis -->
-                        <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield">
+                        <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                             <textarea class="mdl-textfield__input" type="text" rows="3" ng-model="form.input.synopsis" id="synopsis"></textarea>
                             <label class="mdl-textfield__label" for="synopsis">Synopsis</label>
                         </div>
                         <br/>
 
                         <!-- Cover -->
-                        <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield">
-                            <input class="mdl-textfield__input" type="text" ng-model="form.input.cover" id="cover">
-                            <label class="mdl-textfield__label" for="cover">Cover</label>
+                        <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="url" ng-model="form.input.cover" id="cover">
+                            <label class="mdl-textfield__label" for="cover">Cover URL</label>
+                        </div>
+                        <br/>
+
+                        <!-- Release Date -->
+                        <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="date" ng-model="form.input.release" id="release">
+                            <label class="mdl-textfield__label" for="release">Release Date</label>
                         </div>
                     </fieldset>
 
                     <fieldset>
                         <legend>Information</legend>
 
-                            <!-- Genres -->
-                            <tags-input
-                                placeholder="Add Genre" 
-                                ng-model="form.input.genre" 
-                                min-length="2"
-                                template="mdl-chip-template">
-                            </tags-input>
+                        <!-- Genres -->
+                        <tags-input
+                            placeholder="Add Genre" 
+                            ng-model="form.input.genre" 
+                            min-length="2"
+                            template="mdl-chip-template">
+                        </tags-input>
+                        <br/>
+
+                        <!-- Developers -->
+                        <tags-input
+                            placeholder="Add Developer" 
+                            ng-model="form.input.developer" 
+                            min-length="2"
+                            template="mdl-chip-template">
+                        </tags-input>
+                        <br/>
+
+                        <!-- Editors -->
+                        <tags-input
+                            placeholder="Add Editor" 
+                            ng-model="form.input.editor" 
+                            min-length="2"
+                            template="mdl-chip-template">
+                        </tags-input>
+                        <br/>
+
+                        <!-- Voices -->
+                        <tags-input
+                            placeholder="Add Voice" 
+                            ng-model="form.input.audio" 
+                            min-length="2"
+                            max-length="2"
+                            template="mdl-chip-template">
+                        </tags-input>
+                        <br/>
+
+                        <!-- Subtitles -->
+                        <tags-input
+                            placeholder="Add Subtitle" 
+                            ng-model="form.input.subtitle" 
+                            min-length="2"
+                            max-length="2"
+                            template="mdl-chip-template">
+                        </tags-input>
+                        <br/>
+
+                        <!-- Systems -->
+                        <tags-input
+                            placeholder="Add System" 
+                            ng-model="form.input.system" 
+                            min-length="2"
+                            template="mdl-chip-template">
+                        </tags-input>
+
+                    </fieldset>
+
+                    <fieldset class="mdl-cell mdl-cell--1-offset mdl-cell--10-col mdl-grid">
+                        <legend>Download</legend>
+                        <ng-form name="form.input.download.model" ng-submit="form.input.download.submit()">
+
+                            <!-- Name -->
+                            <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="name" ng-model="form.input.download.value.name" id="name">
+                                <label class="mdl-textfield__label" for="name">Name</label>
+                            </div>
                             <br/>
 
-                            <!-- Developers -->
-                            <tags-input
-                                placeholder="Add Developer" 
-                                ng-model="form.input.developer" 
-                                min-length="2"
-                                template="mdl-chip-template">
-                            </tags-input>
+                            <!-- Size -->
+                            <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" ng-model="form.input.download.value.size" id="size">
+                                <label class="mdl-textfield__label" for="size">Size</label>
+                            </div>
                             <br/>
 
-                            <!-- Editors -->
-                            <tags-input
-                                placeholder="Add Editor" 
-                                ng-model="form.input.editor" 
-                                min-length="2"
-                                template="mdl-chip-template">
-                            </tags-input>
+                            <!-- Link -->
+                            <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="url" ng-model="form.input.download.value.link" id="link">
+                                <label class="mdl-textfield__label" for="link">Link</label>
+                            </div>
                             <br/>
 
-                            <!-- Voices -->
-                            <tags-input
-                                placeholder="Add Voice" 
-                                ng-model="form.input.audio" 
-                                min-length="2"
-                                max-length="2"
-                                template="mdl-chip-template">
-                            </tags-input>
-                            <br/>
-
-                            <!-- Subtitles -->
-                            <tags-input
-                                placeholder="Add Subtitle" 
-                                ng-model="form.input.subtitle" 
-                                min-length="2"
-                                max-length="2"
-                                template="mdl-chip-template">
-                            </tags-input>
-                            <br/>
-
-                            <!-- Systems -->
+                            <!-- System -->
                             <tags-input
                                 placeholder="Add System" 
-                                ng-model="form.input.system" 
+                                ng-model="form.input.download.value.system" 
                                 min-length="2"
+                                max-length="2"
                                 template="mdl-chip-template">
                             </tags-input>
                             <br/>
 
-                            <!-- Release Date -->
-                            <div class="mdl-cell mdl-cell--12-col mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="date" ng-model="form.input.release" id="release">
-                                <label class="mdl-textfield__label" for="release">Release Date</label>
-                            </div>
-
+                            <button type="submit" class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised">Submit</button>
+                        </ng-form>
                     </fieldset>
 
-                    <fieldset>
-                        <legend>Download</legend>
-
-                        
-
-                    </fieldset>
-
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="mdl-cell mdl-cell--12-col mdl-button mdl-js-button mdl-button--raised">Submit</button>
                 </form>
-                <pre>{{form.model}}</pre>
                 <!-- Your Work : END -->
 
                 </div>
